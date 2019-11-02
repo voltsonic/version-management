@@ -1,5 +1,9 @@
 # Version Manager
 
+This project aims to simplify the versioning increments and updating that version across various types of files (json / regex text replacement)
+
+[Changelog](./CHANGELOG.md)
+
 To install from npm:
 ```
 npm i --save version-management
