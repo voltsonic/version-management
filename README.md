@@ -22,6 +22,7 @@ dotenv file: `[project]/.env` with `APP_VERSION=1.0.0` as an env variable in the
 // -f = set to specific version.
 
 const VersionManager        = require("version-manager"),
+    GenericVersionTemplate  = require("version-manager/Templates/GenericVersionTemplate"),
     ComposerTemplateModule  = require("version-manager/Templates/Modules/PHP/ComposerTemplateModule"),
     NodeTemplateModule      = require("version-manager/Templates/Modules/NodeJS/NodeTemplateModule"),
     DeveloperTemplateModule = require("version-manager/Templates/Modules/DeveloperTemplateModule");
@@ -39,6 +40,28 @@ VersionManager
     .addTemplate(NodeTemplateModule.standard(projectRoot))
     .addTemplate(DeveloperTemplateModule.dotenv(projectRoot))
     .addTemplate(DeveloperTemplateModule.changelog_hotfixUrls_NodePackage(projectRoot, 'developer/documentation/CHANGELOG.md'))
+    .addTemplate(GenericVersionTemplate.simpleReplace(
+        projectRoot, 
+        ['files/relative/to/projectRoot/1','files/relative/to/projectRoot/2.txt'],
+        { ["search_string="+VersionManager.statics.format.searchers.dots]
+            : "search_string="+VersionManager.statics.format.replacers.dots },
+        "Unique-Key-For-This-Template"
+    ))
+    .addTemplate(GenericVersionTemplate.jsonReplace(
+        projectRoot, 
+        ['json/relative/to/projectRoot/1.json','json/relative/to/projectRoot/2.json'],
+        "Unique-Key-For-This-Template-2",
+        [
+            {
+                key: "version",
+                value: VersionManager.statics.format.replacers.dots
+            },
+            {
+                key: ["child", "version"], // for { child: { version: "1-0-0" }}
+                value: VersionManager.statics.format.replacers.dash
+            }
+        ]
+    ))
     .runTemplate(Version.getUpdated());
 ```
 
