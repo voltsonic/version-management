@@ -1,6 +1,6 @@
 {
   "name": "version-management",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This project aims to simplify the versioning increments and updating that version across various types of files (json / regex text replacement)",
   "main": "VersionManager.js",
   "scripts": {
