@@ -4,7 +4,8 @@
   "description": "",
   "main": "VersionManager.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "update_readme": "node scripts/badges.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +16,39 @@
   "dependencies": {
     "commander": "^3.0.2",
     "semver": "^6.3.0"
+  },
+  "devDependencies": {
+    "@thebespokepixel/badges": "^2.0.1",
+    "badges": "^1.3.0",
+    "esm": "^3.2.25",
+    "lodash": "latest",
+    "remark": "latest"
+  },
+  "badges": {
+    "name": "version-management",
+    "npm": "classynode",
+    "github": "https://github.com/voltsonic/version-management",
+    "providers": {
+      "status": {
+        "text": "stable",
+        "color": "green"
+      }
+    },
+    "readme": {
+      "": [
+        [
+          "status",
+          "npm"
+        ]
+      ]
+    },
+    "docs": {
+      "": [
+        [
+          "status",
+          "npm"
+        ]
+      ]
+    }
   }
 }

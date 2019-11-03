@@ -1,8 +1,6 @@
 # Version Manager
 
-##### 
-
-![Status](https://img.shields.io/badge/status-stable-green) [![npm](https://img.shields.io/npm/v/version-management?logo=npm)](https://www.npmjs.com/package/version-management "npm")   
+${badges}
 
 This project aims to simplify the versioning increments and updating that version across various types of files (json / regex text replacement)
 
