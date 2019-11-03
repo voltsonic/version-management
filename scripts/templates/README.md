@@ -75,8 +75,8 @@ VersionManager
 
 - Force version: `node developer/scripts/version -f 1.0.0` becomes 1.0.0
 - Bump major by 1: `node developer/scripts/version -a` 1.0.0 => 2.0.0
-- Bump minor by 2: `node developer/scripts/version -a` 2.0.0 => 2.2.0
-- Bump patch by 3: `node developer/scripts/version -a` 2.2.0 => 2.2.3
+- Bump minor by 2: `node developer/scripts/version -bb` 2.0.0 => 2.2.0
+- Bump patch by 3: `node developer/scripts/version -ccc` 2.2.0 => 2.2.3
 - Unique bump: `node developer/scripts/version -abbbcc` 2.2.3 => 3.3.2
 
 Once version changes the configured templates will be ran using the updated value.
