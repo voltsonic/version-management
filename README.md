@@ -1,8 +1,9 @@
 # Version Manager
 
-##### 
+[comment_badge_management_start]: <hidden__do_not_remove>
+[![repository badge](scripts/badges/repository.png)](https://github.com/voltsonic/version-management.git) ![version badge](scripts/badges/version.png)
 
-![Status](https://img.shields.io/badge/status-stable-green) [![npm](https://img.shields.io/npm/v/version-management?logo=npm)](https://www.npmjs.com/package/version-management "npm")   
+[comment_badge_management_end]: <hidden__do_not_remove>
 
 This project aims to simplify the versioning increments and updating that version across various types of files (json / regex text replacement)
 
