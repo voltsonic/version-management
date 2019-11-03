@@ -9,9 +9,8 @@ This project aims to simplify the versioning increments and updating that versio
 [Changelog](./CHANGELOG.md)
 
 To install from npm:
-```
-npm i --save version-management
-```
+
+    npm i --save version-management
 
 Save the following somewhere (preferably not project root directory) 
 
@@ -20,6 +19,7 @@ following example: `[project]/developer/scripts/version.js`
 changelog location: `[project]/developer/documentation/CHANGELOG.md`
 
 dotenv file: `[project]/.env` with `APP_VERSION=1.0.0` as an env variable in there. 
+
 ```javascript
 "use strict";
 
@@ -75,10 +75,10 @@ VersionManager
 
 ### Running
 
-- Force version: `node developer/scripts/version -f 1.0.0` becomes 1.0.0
-- Bump major by 1: `node developer/scripts/version -a` 1.0.0 => 2.0.0
-- Bump minor by 2: `node developer/scripts/version -a` 2.0.0 => 2.2.0
-- Bump patch by 3: `node developer/scripts/version -a` 2.2.0 => 2.2.3
-- Unique bump: `node developer/scripts/version -abbbcc` 2.2.3 => 3.3.2
+-   Force version: `node developer/scripts/version -f 1.0.0` becomes 1.0.0
+-   Bump major by 1: `node developer/scripts/version -a` 1.0.0 => 2.0.0
+-   Bump minor by 2: `node developer/scripts/version -bb` 2.0.0 => 2.2.0
+-   Bump patch by 3: `node developer/scripts/version -ccc` 2.2.0 => 2.2.3
+-   Unique bump: `node developer/scripts/version -abbbcc` 2.2.3 => 3.3.2
 
 Once version changes the configured templates will be ran using the updated value.
