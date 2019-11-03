@@ -1,6 +1,6 @@
 {
   "name": "version-management",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "This project aims to simplify the versioning increments and updating that version across various types of files (json / regex text replacement)",
   "main": "VersionManager.js",
   "scripts": {
@@ -18,11 +18,37 @@
     "semver": "^6.3.0"
   },
   "devDependencies": {
+    "badge-management": "^1.0.0",
     "badges": "^1.3.0",
+    "lodash": "latest"
   },
   "badges": {
+    "injectors": {
+      "README.md": [
+        {
+          "definitions": [
+            "repository",
+            "version"
+          ]
+        }
       ]
     },
+    "global": {
+      "store": "scripts/badges/",
+      "badgen": {
+        "labelColor": "555",
+        "color": "blue",
+        "style": "flat",
+        "scale": "1"
+      }
+    },
+    "definitions": {
+      "version": {
+        "type": "package_version"
+      },
+      "repository": {
+        "type": "package_repository_url"
+      }
     }
   }
 }
