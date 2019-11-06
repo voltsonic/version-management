@@ -30,11 +30,11 @@ dotenv file: `[project]/.env` with `APP_VERSION=1.0.0` as an env variable in the
 // -c = bump patch by 1
 // -f = set to specific version.
 
-const VersionManager        = require("version-manager"),
-    GenericVersionTemplate  = require("version-manager/Templates/GenericVersionTemplate"),
-    ComposerTemplateModule  = require("version-manager/Templates/Modules/PHP/ComposerTemplateModule"),
-    NodeTemplateModule      = require("version-manager/Templates/Modules/NodeJS/NodeTemplateModule"),
-    DeveloperTemplateModule = require("version-manager/Templates/Modules/DeveloperTemplateModule");
+const VersionManager        = require("version-management"),
+    GenericVersionTemplate  = require("version-management/Templates/GenericVersionTemplate"),
+    ComposerTemplateModule  = require("version-management/Templates/Modules/PHP/ComposerTemplateModule"),
+    NodeTemplateModule      = require("version-management/Templates/Modules/NodeJS/NodeTemplateModule"),
+    DeveloperTemplateModule = require("version-management/Templates/Modules/DeveloperTemplateModule");
 
 // This is based on version.js being at `[project]/developer/scripts/`
 const projectRoot = require("path").join(__dirname, '..', '..'); 
